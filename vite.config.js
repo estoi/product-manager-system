@@ -10,8 +10,7 @@ export default defineConfig({
     vue(),
     viteMockServe({
       supportTs: false,
-      watchFiles: true,
-      prodEnabled: true
+      watchFiles: true
     }),
     Components({
       resolvers: [
