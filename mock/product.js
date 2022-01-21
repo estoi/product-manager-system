@@ -6,10 +6,11 @@ const data = Mock.mock({
       productId: "@id()",
       productName: "@ctitle(2, 3)",
       productPrice: "@character(number)",
-      productImg: "@image(100)",
-    },
+      productImg: "@image(100)"
+    }
   ],
 });
+
 export default [
   {
     url: "/apis/product/list",
