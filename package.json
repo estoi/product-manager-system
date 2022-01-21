@@ -1,0 +1,25 @@
+{
+  "name": "vite-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.0.0-alpha.14",
+    "axios": "^0.24.0",
+    "less": "^4.1.2",
+    "particles.vue3": "^1.22.0",
+    "vue": "^3.2.25",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "mockjs": "^1.1.0",
+    "unplugin-vue-components": "^0.17.9",
+    "vite": "^2.7.2",
+    "vite-plugin-mock": "^2.9.6"
+  }
+}
