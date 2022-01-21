@@ -13,8 +13,8 @@ export default ({command }) => {
       viteMockServe({
         supportTs: false,
         watchFiles: true,
-        // localEnabled: command === 'serve',
-        // prodEnabled: command !== 'serve' && prodMock,
+        localEnabled: command === 'serve',
+        prodEnabled: command !== 'serve' && prodMock,
         // injectCode: `
         //     import { setupProdMockServer } from './mockProdServer';
         //     setupProdMockServer();
