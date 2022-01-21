@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 
 export default ({command }) => {
+  console.log(command)
   let prodMock = true
   return {
     plugins: [
@@ -12,12 +13,12 @@ export default ({command }) => {
       viteMockServe({
         supportTs: false,
         watchFiles: true,
-        localEnabled: command === 'serve',
-        prodEnabled: command !== 'serve' && prodMock,
-        injectCode: `
-            import { setupProdMockServer } from './mockProdServer';
-            setupProdMockServer();
-          `,
+        // localEnabled: command === 'serve',
+        // prodEnabled: command !== 'serve' && prodMock,
+        // injectCode: `
+        //     import { setupProdMockServer } from './mockProdServer';
+        //     setupProdMockServer();
+        //   `,
       }),
       Components({
         resolvers: [
