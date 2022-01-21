@@ -13,12 +13,13 @@ export default ({command }) => {
       viteMockServe({
         supportTs: false,
         watchFiles: true,
+        mockPath: 'mock',
         localEnabled: command === 'serve',
         prodEnabled: command !== 'serve' && prodMock,
         injectCode: `
-            import { setupProdMockServer } from './mockProdServer.js';
-            setupProdMockServer();
-          `,
+          import { setupProdMockServer } from './mockProdServer';
+          setupProdMockServer();
+        `,
       }),
       Components({
         resolvers: [
