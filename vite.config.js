@@ -15,10 +15,10 @@ export default ({command }) => {
         watchFiles: true,
         localEnabled: command === 'serve',
         prodEnabled: command !== 'serve' && prodMock,
-        // injectCode: `
-        //     import { setupProdMockServer } from './mockProdServer';
-        //     setupProdMockServer();
-        //   `,
+        injectCode: `
+            import { setupProdMockServer } from './mockProdServer.js';
+            setupProdMockServer();
+          `,
       }),
       Components({
         resolvers: [
